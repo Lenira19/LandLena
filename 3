@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<style>
+    
+
+.wrapper {
+  background-color: red;
+  color: white;
+}
+.text2 {
+  background-color: green;
+}
+.inline {
+  display: inline-block;
+  color: palegreen;
+}
+.purple {
+    background-color: purple;
+}
+.maroon {
+    background: maroon;
+}
+.flex-container {
+  display: flex;
+  font-size: 20px;
+  flex-wrap: wrap; /* отвечает за сворачивание (создание новой строки, если закончилось место)*/
+  width: 100px;
+  border: 1px solid blue;
+  flex-direction: row-reverse;
+}
+
+.item {
+  border: 1px solid red;
+  padding: 5px;
+    }
+.item2 {
+  border: 1px solid rgb(162, 0, 255);
+  padding: 5px;
+  width: 150px;
+  height: 140px;
+  }
+.item3 {
+    position: absolute;
+  top: 150px;
+  left: 150px;
+  border: 1px solid rgb(225, 65, 164);
+  padding: 50px;
+}
+.item4 {
+  position: fixed;
+  top: 150px;
+  left: 400px;
+  border: 1px solid rgb(225, 188, 65);
+  padding: 50px;
+}
+.relative {
+  position: relative;
+  top: -10px;
+  left: 15px;
+}
+.relative0 {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+        <h1> Задание 4 </h1> 
+        <div class="wrapper">
+            <div>Привет! Я пытаюсь сделать задание 4</div>
+            <div class="text2">Я тоже, но номер 2. И наша ширина 100%. Мой фон перекрывает красный фон родителя, потому что я вложен в него</div>
+          </div>
+
+          <div class="inline">
+            <div class="inline purple">это инлайн блок</div>
+            <div class="inline maroon">это второй инлайн блок</div>
+          </div>
+          <div class="flex-container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+          </div>
+          <div>
+            <div class="item2 relative0"> Статичный </div>
+            <div class="item2 relative"> Относительный </div>
+            <div class="item2"> Статичный2 </div>
+          </div>
+          <div class="item3"> Абсолютный </div>
+          <div class="item4"> Фиксик </div>
+          
+          
+          
+      
+
+        
+          
+</body>
+</html>
