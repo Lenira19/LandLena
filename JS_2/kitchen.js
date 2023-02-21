@@ -36,7 +36,6 @@ price_delishes_aft={
     olivie_salat:price_delishes_pre.olivie_salat*1.25
 };
 
-console.log(price_delishes_aft.fried_eggs)
 
 let soup_with_noodls_income = price_delishes_aft.soup_with_noodls - price_delishes_pre.soup_with_noodls;
 let fried_eggs_income = price_delishes_aft.fried_eggs - price_delishes_pre.fried_eggs;
