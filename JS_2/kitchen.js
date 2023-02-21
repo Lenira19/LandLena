@@ -1,25 +1,56 @@
-let kitchen= {
-    soup:['onion','potato','tomato'],
-    tart:['eggs','milk','suger'],
-    fried_eggs:['eggs','onion','salt']
+let soup_with_noodls= {
+    ingradients: ['potato','salt','noodlse'],
+    price: 290,
+
 };
 
-let price = {
-    soup: '500',
-    tart:'2000'
+let fried_eggs = {
+    ingradients:['eggs','onion','vagatable_oil'],
+    price:199
+}; 
+
+let olivie_salat = {
+    ingradioents:['peas','eggs','mayonnaise','carrot'],
+    price:499
 };
 
-let list_price_kitchen = [kitchen,price];
+let list_delishes = [soup_with_noodls,fried_eggs,olivie_salat];
 
-list_price_kitchen.pop();
+list_delishes.pop();
 
-/* переприсваиваем price словарю только два элемента*/
-let price = {
-    soup: '500',
-    tart:'2000'
+olivie_salat.list_delishes.shift();
+
+list_delishes.unshift(olivie_salat);
+
+price_delishes_pre={
+    soup_with_noodls:soup_with_noodls.price,
+    fried_egges:fried_eggs.price,
+    olivie_salat:olivie_salat.price
 };
 
-list_price_kitchen.unshift(price);
+price_delishes_aft={
+    soup_with_noodls:price_delishes_pre[soup_with_noodls]*1.25,
+    fried_eggs:price_delishes_pre[fried_eggs]*1.25,
+    olivie_salat:price_delishes_pre[olivie_salat]*1.25
+};
+
+let soup_with_noodls_income = price_delishes_aft.soup_with_noodls - price_delishes_pre.soup_with_noodls;
+let fried_eggs_income = price_delishes_aft.fried_eggs - price_delishes_pre.fried_eggs;
+let olivie_salat_income = price_delishes_aft.olivie_salat - price_delishes_pre.olivie_salat;
+
+
+
+alert('суп с лапшой доход =', soup_with_noodls_income);
+alert('жареные яйца доход =', fried_eggs_income);
+alert('оливье доход = ',  olivie_salat_income)
+
+
+
+
+
+
+
+
 
 
 
