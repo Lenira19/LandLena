@@ -10,15 +10,16 @@ let fried_eggs = {
 }; 
 
 let olivie_salat = {
-    ingradioents:['peas','eggs','mayonnaise','carrot'],
+    ingradients:['peas','eggs','mayonnaise','carrot'],
     price:499
 };
+
 
 let list_delishes = [soup_with_noodls,fried_eggs,olivie_salat];
 
 list_delishes.pop();
 
-olivie_salat.list_delishes.shift();
+olivie_salat.ingradients.shift();
 
 list_delishes.unshift(olivie_salat);
 
@@ -28,21 +29,25 @@ price_delishes_pre={
     olivie_salat:olivie_salat.price
 };
 
+
 price_delishes_aft={
-    soup_with_noodls:price_delishes_pre[soup_with_noodls]*1.25,
-    fried_eggs:price_delishes_pre[fried_eggs]*1.25,
-    olivie_salat:price_delishes_pre[olivie_salat]*1.25
+    soup_with_noodls:price_delishes_pre.soup_with_noodls*1.25,
+    fried_eggs:price_delishes_pre.fried_eggs*1.25,
+    olivie_salat:price_delishes_pre.olivie_salat*1.25
 };
 
 let soup_with_noodls_income = price_delishes_aft.soup_with_noodls - price_delishes_pre.soup_with_noodls;
 let fried_eggs_income = price_delishes_aft.fried_eggs - price_delishes_pre.fried_eggs;
 let olivie_salat_income = price_delishes_aft.olivie_salat - price_delishes_pre.olivie_salat;
 
+console.log('доход с блюда суп лапша = ' soup_with_noodls_income)
+console.log('доход с блюда жаренные яйца = ' fried_eggs_income)
+console.log('доход с блюда оливье = ' olivie_salat_income)
 
 
-alert('суп с лапшой доход =', soup_with_noodls_income);
-alert('жареные яйца доход =', fried_eggs_income);
-alert('оливье доход = ',  olivie_salat_income)
+
+
+
 
 
 
