@@ -23,14 +23,14 @@ olivie_salat.ingradients.shift();
 
 list_delishes.unshift(olivie_salat);
 
-price_delishes_pre={
+let price_delishes_pre={
     soup_with_noodls:soup_with_noodls.price,
     fried_eggs:fried_eggs.price,
     olivie_salat:olivie_salat.price
 };
 
 
-price_delishes_aft={
+let price_delishes_aft={
     soup_with_noodls:price_delishes_pre.soup_with_noodls*1.25,
     fried_eggs:price_delishes_pre.fried_eggs*1.25,
     olivie_salat:price_delishes_pre.olivie_salat*1.25
