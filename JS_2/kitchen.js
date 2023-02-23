@@ -31,9 +31,9 @@ let price_delishes_pre={
 
 
 let price_delishes_aft={
-    soup_with_noodls:price_delishes_pre.soup_with_noodls*1.25,
-    fried_eggs:price_delishes_pre.fried_eggs*1.25,
-    olivie_salat:price_delishes_pre.olivie_salat*1.25
+    soup_with_noodls:price_delishes_pre.soup_with_noodls*1.5,
+    fried_eggs:price_delishes_pre.fried_eggs*1.5,
+    olivie_salat:price_delishes_pre.olivie_salat*1.5
 };
 
 
