@@ -5,7 +5,6 @@ for (i=0; i<11; i=i+2){
 
 
 
-continue;
 /* инградиенты*/
 let soupWithNoodlsIng = ['potato','salt','noodls'];
 let friedEggsIng = ['eggs','onion','vagatableOil'];
