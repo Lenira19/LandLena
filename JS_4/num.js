@@ -29,7 +29,8 @@ let menuString = ['soupWithNoodles','friedEggsIng','olivieSalat'];
 /* перебираем menu и  в menu инградиенты высчитывая прибыль(прибыль 100 процентов) и по итогам заполняем объект menuProfit*/
 
 let menuProfit = {};
-let count=0
+let count = 0
+let ingr = 0
 for(j in menu){
    for( i in menu[j]){
     ingr = menu[j][i]
