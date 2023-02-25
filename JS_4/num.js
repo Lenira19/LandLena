@@ -46,6 +46,20 @@ console.log('Вывод прибыли с каждого блюда')
 console.log(menuProfit)
 
 
+
+/*цикл бесконечный*/
+let k = 1
+count = 0
+
+do {
+    count++
+    console.log(count)
+    if(count==5){
+     breake;   
+    };
+} while([k>0]);
+
+
  
 
 
