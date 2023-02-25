@@ -42,6 +42,7 @@ for(j in menu){
 };
 
 /* Вывод результата*/
+console.log('Вывод прибыли с каждого блюда')
 console.log(menuProfit)
 
 
