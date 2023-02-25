@@ -55,7 +55,7 @@ do {
     count++
     console.log(count)
     if(count==5){
-     breake;   
+     break;   
     };
 } while([k>0]);
 
