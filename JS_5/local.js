@@ -36,12 +36,12 @@ for(j in menu){
    for( i in menu[j]){
     let ingr = menu[j][i]   /* локальная переменная*/
     count=count+ingradients[ingr] 
-    stringLocalIngJ = stringLocalIngJ + ingr+','
+    stringLocalIngJ = stringLocalIngJ + ingr+',' /*локальная переменая где мы собираем все инградиенты */
     };
     menuProfit[menuString[j]]=count
     listProfit[j]['profit'] = count 
     
-     menuText = menuText + menuString[j]+':' + stringLocalIngJ.slice(0,-1)+'  '+`стоимость ${count*2} рублей`+'!'+'  ' /* глобальная*/
+     menuText = menuText + menuString[j]+':' + stringLocalIngJ.slice(0,-1)+'  '+`стоимость ${count*2} рублей`+'!'+'  ' /* глобальная где мы собираем меню*/
      count=0
 
 
