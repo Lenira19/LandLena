@@ -28,10 +28,13 @@ let menu = [soupWithNoodlsIng,friedEggsIng,olivieSalatIng];
 let menuString = ['soupWithNoodles','friedEggsIng','olivieSalat'];
 
 /* перебираем menu и  в menu инградиенты высчитывая прибыль(прибыль 100 процентов) и по итогам заполняем объект menuProfit*/
-
+let soupWithNoodlsProfit={};
+let friedEggsProfit={};
+let olivieSalatProfit={};
+let listProfit = [soupWithNoodlsProfit,friedEggsProfit,olivieSalatProfit];
 let menuProfit = {};
-let count = 0
-let ingr = 0
+let count = 0;
+let ingr = 0;
 for(j in menu){
    for( i in menu[j]){
     ingr = menu[j][i]
@@ -40,12 +43,18 @@ for(j in menu){
    };
 
    menuProfit[menuString[j]]=count
+   listProfit[j]['profit'] = count /*Записываю прибыль отдельно для каждого блюда в отдельный объект */
+
+   
    count=0
+
+
 };
 
-/* Вывод результата*/
-console.log('Вывод прибыли с каждого блюда')
-console.log(menuProfit)
+console.log(listProfit)
+
+
+
 
 /*цикл бесконечный*/
 let k = 1;
