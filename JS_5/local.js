@@ -30,11 +30,11 @@ let listProfit = [soupWithNoodlsProfit,friedEggsProfit,olivieSalatProfit];
 let menuProfit = {};
 let count = 0;
 let ingr = 0;
-let menuText = ''; /*Глобальная переменная*/
+let menuText = ''; /*Глобальная переменна меню*/
 for(j in menu){
-    let stringLocalIngJ = '' /* локальная переменная*/
+    let stringLocalIngJ = '' /* локальная переменная где мы обнуляем переменную для инградиентов*/
    for( i in menu[j]){
-    let ingr = menu[j][i]   /* локальная переменная*/
+    let ingr = menu[j][i]   /* локальная переменная в которой хранится один иградиент*/
     count=count+ingradients[ingr] 
     stringLocalIngJ = stringLocalIngJ + ingr+',' /*локальная переменая где мы собираем все инградиенты */
     };
