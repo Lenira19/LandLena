@@ -41,7 +41,7 @@ for(j in menu){
     menuProfit[menuString[j]]=count
     listProfit[j]['profit'] = count 
     
-     menuText = menuText + menuString[j]+':' + stringLocalIngJ.slice(0,-1)+'  '+`стоимость ${count*2} рублей`+'!'+'  ' /* глобальная где мы собираем меню*/
+     menuText = menuText + menuString[j]+':' + stringLocalIngJ.slice(0,-1)+'  '+`cost ${count*2} rub`+'!'+'  ' /* глобальная где мы собираем меню*/
      count=0
 
 
