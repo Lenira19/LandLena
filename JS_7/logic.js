@@ -16,7 +16,7 @@ function check(Name, pass) {
 let data = { admin: 'root', user: '123' };
 
 let Name = prompt('введите логин');
-let pass = prompt('введит пароль');
+let pass = prompt('введите пароль');
 
 alert(check(Name, pass));
 

@@ -5,6 +5,7 @@ function minimum(num1, num2) {
 let num1 = prompt('введите первое число');
 let num2 = prompt('введите второе число');
 console.log(minimum(num1, num2)) //минимальное число выведет
+alert(`минимальное число${minimum(num1, num2)}`)
 
 
 
