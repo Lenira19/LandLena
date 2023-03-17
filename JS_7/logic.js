@@ -1,6 +1,6 @@
 function check(nameSelf, pass) {
     if (data[nameSelf]) {
-        if (data[name] == pass) {
+        if (data[nameSelf] == pass) {
 
             return 'Вы вошли';
         }
