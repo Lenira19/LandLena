@@ -10,7 +10,7 @@ function check(Name, pass) {
         }
 
 
-    } else { return 'Такого пользователя не существует' }
+    } else { return 'Такого пользователя не существует'; }
 };
 
 let data = { admin: 'root', user: '123' };
