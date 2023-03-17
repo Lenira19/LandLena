@@ -1,5 +1,5 @@
-function check(name, pass) {
-    if (data[name]) {
+function check(nameSelf, pass) {
+    if (data[nameSelf]) {
         if (data[name] == pass) {
 
             return 'Вы вошли';
@@ -15,10 +15,10 @@ function check(name, pass) {
 
 let data = { admin: 'root', user: '123' };
 
-let name = prompt('введите логин');
+let nameSelf = prompt('введите логин');
 let pass = prompt('введите пароль');
 
-alert(check(name, pass));
+alert(check(nameSelf, pass));
 
 
 
