@@ -1,7 +1,6 @@
 function check(Name, pass) {
     if (data[Name]) {
-        if (data[Name] == 'root' || data[Name] =='123') {
-            alert(data[Name] == 'root' || data[Name] =='123')
+        if (data[Name] == pass) {
 
             return 'Вы вошли';
         }
