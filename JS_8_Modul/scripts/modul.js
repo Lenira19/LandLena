@@ -1,4 +1,4 @@
-import {check} from 'logic.js';
+import {check} from "logic.js";
 
 let data = { admin: 'root', user: '123' };
 
