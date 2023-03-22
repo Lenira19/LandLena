@@ -1,4 +1,5 @@
 export function check(nameSelf, pass) {
+    let data = { admin: 'root', user: '123' };
     if (data[nameSelf]) {
         if (data[nameSelf] == pass) {
 
