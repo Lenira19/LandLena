@@ -59,7 +59,8 @@ let soupWithNoodls = {
     /*массив блюд*/
     let menu = [soupWithNoodls,friedEggs,olivieSalad,funchosaWithVegetables];
     
-    // 1 .расчет и добавление в объект себестоимости блюд
+    //1 .расчет и добавление в объект себестоимости блюд
+    console.log(' 1 .расчет и добавление в объект себестоимости блюд')
     menu.forEach(function(item, index, arr) {
         let costPre = menu[index]['ingradients'].reduce(function(sum, item,index) {
             return sum + ingradients[item]; 
@@ -75,8 +76,8 @@ let soupWithNoodls = {
 
 
 
-
     //2. Возвращаем массив с названием блюда и стоимостью
+    console.log('2. Возвращаем массив с названием блюда и стоимостью')
 
 let delishCost = menu.map(function(item, index, arr) {
 
@@ -86,6 +87,7 @@ let delishCost = menu.map(function(item, index, arr) {
 
 
 //3. одно вегетарианское блюдо, используя `some`.
+console.log('3. одно вегетарианское блюдо, используя `some`.')
 
 let vegan = menu.some(function(item,index,arr){
 
@@ -97,7 +99,7 @@ console.log(vegan);
 
 
 //4.
-
+console.log('Определите, полностью ли у вас вегетарианское меню с помощью `every`.')
 let veganWholly = menu.every(function(item,index,arr){
 
     return menu[index]['type'] == 'vegatarian';
@@ -108,6 +110,7 @@ console.log(veganWholly);
 
 
 //5.
+console.log('Создайте массив с вегетарианскими блюдами с помощью filter.')
 
 let veganMass = menu.filter(function(item,index,arr){
 
