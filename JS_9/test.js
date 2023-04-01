@@ -1,7 +1,3 @@
-let menu = ["pizza", "pasta", "buuza"];
+let menu = ["1a", "pasta", "buuza"];
 
-let startWithP = menu.map(function(item, index, arr) {
-    console.log(item);
-  return item.toUpperCase();
-});
-
+console.log("1a" in menu)

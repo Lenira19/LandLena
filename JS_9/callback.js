@@ -89,19 +89,30 @@ let delishCost = menu.map(function (item, index, arr) {
 console.log(delishCost)
 
 
+
+// делаем массив boollian значений и добаляем его в объект каждого блюда
+menu.forEach(function (item, index, arr) {
+
+    let massItem = menu[index].ingradients
+    let massBool = []
+    massItem.forEach(function (item, index, arr) {
+        let bool = ingradientsNonVegan.includes(item);
+        massBool.push(bool);
+    });
+    menu[index].boolIndex = new Set(massBool); //в множестов преобразуем array  для сравнения some every filter
+});
+
+
+
+
+
 //3. одно вегетарианское блюдо, используя `some`.
 console.log('3. одно вегетарианское блюдо, используя `some`.')
-
+const fals = new Set([false]);
 let vegan = menu.some(function (item, index, arr) {
-    ing = menu[index].ingradients
-    return function someVeganDelish(ingradientsNonVegan, ing) {
-        ingradientsNonVegan.foreach(function (item, index, arr) {
-            return item in ing
 
-        });
+    return (menu[index].boolIndex.has(false) && menu[index].boolIndex.size == 1);
 
-
-    };
 
 });
 
@@ -111,36 +122,28 @@ console.log(vegan);
 //4.
 console.log('Определите, полностью ли у вас вегетарианское меню с помощью `every`.')
 let veganEvery = menu.every(function (item, index, arr) {
-    ing = menu[index].ingradients
-    return function everyVeganDelish(ingradientsNonVegan, ing) {
-        ingradientsNonVegan.foreach(function (item, index, arr) {
-            return item in ing
 
-        });
+    return (menu[index].boolIndex.has(false) && menu[index].boolIndex.size == 1);
 
-
-    };
 
 });
-console.log(eganEvery)
+console.log(veganEvery)
 
 //5.
 console.log('Создайте массив с вегетарианскими блюдами с помощью filter.')
 
 let massVegan = menu.filter(function (item, index, arr) {
-    ing = menu[index].ingradients
-    return function massVeganDelish(ingradientsNonVegan, ing) {
-        ingradientsNonVegan.foreach(function (item, index, arr) {
-            return item in ing
-
-        });
-
-
-    };
+    return (menu[index].boolIndex.has(false) && menu[index].boolIndex.size == 1);
 
 });
 
 console.log(massVegan)
+
+
+
+
+
+
 
 
 
