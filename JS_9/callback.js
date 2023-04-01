@@ -5,7 +5,7 @@ let soupWithNoodls = {
     costAft: null,
     name: 'soupWithNoodls',
     profit: null,
-    type: 'vegatarian'
+
 };
 
 let friedEggs = {
@@ -14,7 +14,7 @@ let friedEggs = {
     costAft: null,
     name: 'friedEggs',
     profit: null,
-    type: 'nonVegatarian'
+
 
 };
 
@@ -24,7 +24,7 @@ let olivieSalad = {
     costAft: null,
     name: 'olivieSalad',
     profit: null,
-    type: 'nonVegatarian'
+
 };
 
 let funchosaWithVegetables = {
@@ -33,7 +33,7 @@ let funchosaWithVegetables = {
     costAft: null,
     name: 'funchosaWithVegetables',
     profit: null,
-    type: 'vegatarian'
+
 
 };
 
@@ -55,6 +55,8 @@ let ingradients = {
     sesameSeeds: 45
 
 };
+// не вегетарианские иградиенты
+ingradientsNonVegan = ['eggs', 'mayonnaise'];
 
 /*массив блюд*/
 let menu = [soupWithNoodls, friedEggs, olivieSalad, funchosaWithVegetables];
@@ -62,15 +64,15 @@ let menu = [soupWithNoodls, friedEggs, olivieSalad, funchosaWithVegetables];
 //1 .расчет и добавление в объект себестоимости блюд
 console.log(' 1 .расчет и добавление в объект себестоимости блюд')
 menu.forEach(function (item, index, arr) {
-    let costPre = menu[index]['ingradients'].reduce(function (sum, item, index) {
+    let costPre = menu[index].ingradients.reduce(function (sum, item, index) {
         return sum + ingradients[item];
     }, 0);
-    menu[index]['costPre'] = costPre // добавляем в объект себестоимость
+    menu[index].costPre = costPre // добавляем в объект себестоимость
 });
 
 //вывод в консоль результата
 menu.forEach(function (item, index) {
-    console.log(menu[index]['name'])
+    console.log(menu[index].name)
     console.log(item)
 });
 
@@ -81,7 +83,7 @@ console.log('2. Возвращаем массив с названием блюд
 
 let delishCost = menu.map(function (item, index, arr) {
 
-    return [menu[index]['name'], menu[index]['costPre']];
+    return [menu[index].name, menu[index].costPre];
 
 });
 console.log(delishCost)
@@ -91,8 +93,15 @@ console.log(delishCost)
 console.log('3. одно вегетарианское блюдо, используя `some`.')
 
 let vegan = menu.some(function (item, index, arr) {
+    ing = menu[index].ingradients
+    return function someVeganDelish(ingradientsNonVegan, ing) {
+        ingradientsNonVegan.foreach(function (item, index, arr) {
+            return item in ing
 
-    return menu[index]['type'] == 'vegatarian';
+        });
+
+
+    };
 
 });
 
@@ -101,24 +110,37 @@ console.log(vegan);
 
 //4.
 console.log('Определите, полностью ли у вас вегетарианское меню с помощью `every`.')
-let veganWholly = menu.every(function (item, index, arr) {
+let veganEvery = menu.every(function (item, index, arr) {
+    ing = menu[index].ingradients
+    return function everyVeganDelish(ingradientsNonVegan, ing) {
+        ingradientsNonVegan.foreach(function (item, index, arr) {
+            return item in ing
 
-    return menu[index]['type'] == 'vegatarian';
+        });
+
+
+    };
 
 });
-
-console.log(veganWholly);
-
+console.log(eganEvery)
 
 //5.
 console.log('Создайте массив с вегетарианскими блюдами с помощью filter.')
 
-let veganMass = menu.filter(function (item, index, arr) {
+let massVegan = menu.filter(function (item, index, arr) {
+    ing = menu[index].ingradients
+    return function massVeganDelish(ingradientsNonVegan, ing) {
+        ingradientsNonVegan.foreach(function (item, index, arr) {
+            return item in ing
 
-    return menu[index]['type'] == 'vegatarian';
+        });
+
+
+    };
+
 });
 
-console.log(veganMass)
+console.log(massVegan)
 
 
 
