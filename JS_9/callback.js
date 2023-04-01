@@ -84,6 +84,7 @@ let delishCost = menu.map(function (item, index, arr) {
     return [menu[index]['name'], menu[index]['costPre']];
 
 });
+console.log(delishCost)
 
 
 //3. одно вегетарианское блюдо, используя `some`.
