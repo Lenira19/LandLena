@@ -90,7 +90,7 @@ console.log(delishCost)
 
 
 
-// делаем массив bolean значений и добаляем его в объект каждого блюда
+// делаем множество bolean из совпадений из массива с не вегетерианскими блюдами и добаляем его в объект каждого блюда
 menu.forEach(function (item, index, arr) {
 
     let massItem = menu[index].ingradients
