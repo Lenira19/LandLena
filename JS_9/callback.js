@@ -90,7 +90,7 @@ console.log(delishCost)
 
 
 
-// делаем массив boollian значений и добаляем его в объект каждого блюда
+// делаем массив bolean значений и добаляем его в объект каждого блюда
 menu.forEach(function (item, index, arr) {
 
     let massItem = menu[index].ingradients
