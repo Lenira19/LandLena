@@ -90,28 +90,22 @@ console.log(delishCost)
 
 
 
-// делаем множество bolean из совпадений из массива с не вегетерианскими блюдами и добаляем его в объект каждого блюда
-menu.forEach(function (item, index, arr) {
-
-    let massItem = menu[index].ingradients
-    let massBool = []
-    massItem.forEach(function (item, index, arr) {
-        let bool = ingradientsNonVegan.includes(item);
-        massBool.push(bool);
-    });
-    menu[index].boolIndex = new Set(massBool); //в множестов преобразуем array  для сравнения some every filter
-});
-
-
-
-
-
 //3. одно вегетарианское блюдо, используя `some`.
 console.log('3. одно вегетарианское блюдо, используя `some`.')
 const fals = new Set([false]);
 let vegan = menu.some(function (item, index, arr) {
 
-    return (menu[index].boolIndex.has(false) && menu[index].boolIndex.size == 1);
+    let massItem = menu[index].ingradients
+    let massBool = []
+
+    massItem.forEach(function (item, index, arr) {
+        let bool = ingradientsNonVegan.includes(item);
+        massBool.push(bool);
+    });
+
+    massBool = new Set(massBool);
+
+    return (massBool.has(false) && massBool.size == 1);
 
 
 });
@@ -123,8 +117,17 @@ console.log(vegan);
 console.log('Определите, полностью ли у вас вегетарианское меню с помощью `every`.')
 let veganEvery = menu.every(function (item, index, arr) {
 
-    return (menu[index].boolIndex.has(false) && menu[index].boolIndex.size == 1);
+    let massItem = menu[index].ingradients
+    let massBool = []
 
+    massItem.forEach(function (item, index, arr) {
+        let bool = ingradientsNonVegan.includes(item);
+        massBool.push(bool);
+    });
+
+    massBool = new Set(massBool);
+
+    return (massBool.has(false) && massBool.size == 1);
 
 });
 console.log(veganEvery)
@@ -133,7 +136,17 @@ console.log(veganEvery)
 console.log('Создайте массив с вегетарианскими блюдами с помощью filter.')
 
 let massVegan = menu.filter(function (item, index, arr) {
-    return (menu[index].boolIndex.has(false) && menu[index].boolIndex.size == 1);
+    let massItem = menu[index].ingradients
+    let massBool = []
+
+    massItem.forEach(function (item, index, arr) {
+        let bool = ingradientsNonVegan.includes(item);
+        massBool.push(bool);
+    });
+
+    massBool = new Set(massBool);
+
+    return (massBool.has(false) && massBool.size == 1);
 
 });
 
