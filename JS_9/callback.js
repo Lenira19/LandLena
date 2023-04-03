@@ -95,10 +95,10 @@ console.log('3. одно вегетарианское блюдо, использ
 
 let vegan = menu.some(function (item, index, arr) {
 
-    let massItem = menu[index].ingradients;
+    //let massItem = menu[index].ingradients;
     let massBool = [];
 
-    massItem.forEach(function (item, index, arr) {
+    item.ingradients.forEach(function (item, index, arr) {
         let bool = ingradientsNonVegan.includes(item);
         massBool.push(bool);
     });
@@ -114,13 +114,13 @@ console.log(vegan);
 
 
 //4.
-console.log('Определите, полностью ли у вас вегетарианское меню с помощью `every`.')
+console.log('4 Определите, полностью ли у вас вегетарианское меню с помощью `every`.')
 let veganEvery = menu.every(function (item, index, arr) {
 
-    let massItem = menu[index].ingradients;
+   
     let massBool = [];
 
-    massItem.forEach(function (item, index, arr) {
+    item.ingradients.forEach(function (item, index, arr) {
         let bool = ingradientsNonVegan.includes(item);
         massBool.push(bool);
     });
@@ -133,13 +133,13 @@ let veganEvery = menu.every(function (item, index, arr) {
 console.log(veganEvery);
 
 //5.
-console.log('Создайте массив с вегетарианскими блюдами с помощью filter.')
+console.log('5 Создайте массив с вегетарианскими блюдами с помощью filter.')
 
 let massVegan = menu.filter(function (item, index, arr) {
-    let massItem = menu[index].ingradients;
+   
     let massBool = [];
 
-    massItem.forEach(function (item, index, arr) {
+    item.ingradients.forEach(function (item, index, arr) {
         let bool = ingradientsNonVegan.includes(item);
         massBool.push(bool);
     });
