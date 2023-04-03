@@ -92,7 +92,7 @@ console.log(delishCost);
 
 //3. одно вегетарианское блюдо, используя `some`.
 console.log('3. одно вегетарианское блюдо, используя `some`.')
-const fals = new Set([false]);
+
 let vegan = menu.some(function (item, index, arr) {
 
     let massItem = menu[index].ingradients;
