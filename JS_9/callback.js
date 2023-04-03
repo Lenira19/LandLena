@@ -95,17 +95,14 @@ console.log('3. одно вегетарианское блюдо, использ
 
 let vegan = menu.some(function (item, index, arr) {
 
-    //let massItem = menu[index].ingradients;
-    let massBool = [];
+    massBuel = item.ingradients.map(function (item, index, arr) {
+        return item = ingradientsNonVegan.includes(item);
 
-    item.ingradients.forEach(function (item, index, arr) {
-        let bool = ingradientsNonVegan.includes(item);
-        massBool.push(bool);
     });
 
-    massBool = new Set(massBool);
+    massBuel = new Set(massBuel);
 
-    return (massBool.has(false) && massBool.size == 1);
+    return (massBuel.has(false) && massBuel.size == 1);
 
 
 });
@@ -117,17 +114,14 @@ console.log(vegan);
 console.log('4 Определите, полностью ли у вас вегетарианское меню с помощью `every`.')
 let veganEvery = menu.every(function (item, index, arr) {
 
-   
-    let massBool = [];
+    massBuel = item.ingradients.map(function (item, index, arr) {
+        return item = ingradientsNonVegan.includes(item);
 
-    item.ingradients.forEach(function (item, index, arr) {
-        let bool = ingradientsNonVegan.includes(item);
-        massBool.push(bool);
     });
 
-    massBool = new Set(massBool);
+    massBuel = new Set(massBuel);
 
-    return (massBool.has(false) && massBool.size == 1);
+    return (massBuel.has(false) && massBuel.size == 1);
 
 });
 console.log(veganEvery);
@@ -136,17 +130,15 @@ console.log(veganEvery);
 console.log('5 Создайте массив с вегетарианскими блюдами с помощью filter.')
 
 let massVegan = menu.filter(function (item, index, arr) {
-   
-    let massBool = [];
 
-    item.ingradients.forEach(function (item, index, arr) {
-        let bool = ingradientsNonVegan.includes(item);
-        massBool.push(bool);
+    massBuel = item.ingradients.map(function (item, index, arr) {
+        return item = ingradientsNonVegan.includes(item);
+
     });
 
-    massBool = new Set(massBool);
+    massBuel = new Set(massBuel);
 
-    return (massBool.has(false) && massBool.size == 1);
+    return (massBuel.has(false) && massBuel.size == 1);
 
 });
 
