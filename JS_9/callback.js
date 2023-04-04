@@ -83,7 +83,7 @@ console.log('2. Возвращаем массив с названием блюд
 
 let delishCost = menu.map(function (item, index, arr) {
 
-    return [menu[index].name, menu[index].costPre];F
+    return [menu[index].name, menu[index].costPre]; F
 
 });
 console.log(delishCost);
@@ -95,28 +95,29 @@ console.log('3. одно вегетарианское блюдо, использ
 
 let vegan = menu.some(function (item, index, arr) {
 
-    massBuel = item.ingradients.map(function (item, index, arr) {
-        return item = ingradientsNonVegan.includes(item);
-    });
-    massBuel = new Set(massBuel);
-    return (massBuel.has(false) && massBuel.size == 1);
+    massBuel = item.ingradients.some(function (item, index, arr) {
+        return ingradientsNonVegan.includes(item);
     });
 
-    console.log(vegan);
+    
+    return massBuel;
+});
+
+console.log(vegan);
 
 
 //4.
 console.log('4 Определите, полностью ли у вас вегетарианское меню с помощью `every`.')
-    let veganEvery = menu.every(function (item, index, arr) {
+let veganEvery = menu.every(function (item, index, arr) {
 
-    massBuel = item.ingradients.map(function (item, index, arr) {
-        return item = ingradientsNonVegan.includes(item);
+    massBuel = item.ingradients.some(function (item, index, arr) {
+        return ingradientsNonVegan.includes(item);
 
     });
 
-    massBuel = new Set(massBuel);
 
-    return (massBuel.has(false) && massBuel.size == 1);
+
+    return massBuel;
 
 });
 console.log(veganEvery);
@@ -126,14 +127,12 @@ console.log('5 Создайте массив с вегетарианскими �
 
 let massVegan = menu.filter(function (item, index, arr) {
 
-    massBuel = item.ingradients.map(function (item, index, arr) {
-        return item = ingradientsNonVegan.includes(item);
+    massBuel = item.ingradients.some(function (item, index, arr) {
+        return ingradientsNonVegan.includes(item);
 
     });
 
-    massBuel = new Set(massBuel);
-
-    return (massBuel.has(false) && massBuel.size == 1);
+    return !massBuel;
 
 });
 
