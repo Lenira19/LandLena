@@ -100,7 +100,7 @@ let vegan = menu.some(function (item, index, arr) {
     });
 
     
-    return massBuel;
+    return !massBuel;
 });
 
 console.log(vegan);
@@ -117,7 +117,7 @@ let veganEvery = menu.every(function (item, index, arr) {
 
 
 
-    return massBuel;
+    return !massBuel;
 
 });
 console.log(veganEvery);
