@@ -1,28 +1,58 @@
-[{
 
-    "ingradients": ["potato", "salt", "noodls"],
-    "costPre": null,
-    "costAft": null,
-    "name": "soupWithNoodls",
-    "profit": "null"
+    [{
+        "ingradients": [
+            "potato",
+            "salt",
+            "noodls"
+        ],
+        "costPre": null,
+        "costAft": null,
+        "name": "soupWithNoodls",
+        "profit": "null"
+    },
 
-}, {
-    "ingradients": ["eggs", "onion", "vagatableOil"],
-    "costPre": null,
-    "costAft": null,
-    "name": "friedEggs",
-    "profit": null
+    
+    {
+        "ingradients": [
+            "eggs",
+            "onion",
+            "vagatableOil"
+        ],
+        "costPre": null,
+        "costAft": null,
+        "name": "friedEggs",
+        "profit": null
+    },
 
+    
+    {
+        "ingradients": [
+            "peas",
+            "eggs",
+            "mayonnaise",
+            "carrot"
+        ],
+        "costPre": null,
+        "costAft": null,
+        "name": "olivieSalad",
+        "profit": null
+    },
 
-}, {
-"ingradients": ["peas", "eggs", "mayonnaise", "carrot"],
-"costPre": null,
-"costAft": null,
-"name": "olivieSalad",
-"profit": null}, 
-{
-    "ingradients": ["funchosa", "peper", "onion", "carrot", "cucamber", "soySauce", "salt", "vagatableOil", "sesameSeeds"],
-    "costPre": null,
-    "costAft": null,
-    "name": "funchosaWithVegetables",
-    "profit": null}]
+    
+    {
+        "ingradients": [
+            "funchosa",
+            "peper",
+            "onion",
+            "carrot",
+            "cucamber",
+            "soySauce",
+            "salt",
+            "vagatableOil",
+            "sesameSeeds"
+        ],
+        "costPre": null,
+        "costAft": null,
+        "name": "funchosaWithVegetables",
+        "profit": null
+    }]
