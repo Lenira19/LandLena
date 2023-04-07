@@ -66,12 +66,6 @@ let veganEvery = menu.every(function (item, index, arr) {
 });
 console.log(veganEvery);
 
-
-
-
-
-    
-
     
     });
 
